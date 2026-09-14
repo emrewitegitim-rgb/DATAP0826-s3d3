@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw_gz_data
+    description: Main data for analysis
+    tables:
+      - name: products
+        identifier: raw_product
+        description: product list
+        columns:
+          - name: products_id
+            description: unique id of the product
+            tests:
+              - unique
+              - not_null
+      - name: sales
+        identifier: raw_sales
+        description: sales data of greenweez
+        columns:
+          - name: pdt_id
+            description: id of the product
+            tests:
+              - not_null
+              
+              
+              
