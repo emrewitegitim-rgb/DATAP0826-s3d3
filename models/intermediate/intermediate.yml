@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: int_sales_product
+    description: join sales and product to get purchas cost of the order
+    columns:
+      - name: product_id
+        description: id of the product
+        tests:
+          - not_null
+          
